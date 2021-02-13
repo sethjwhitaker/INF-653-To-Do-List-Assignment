@@ -41,6 +41,11 @@ main {
     display: none;
   }
 
+.empty-results {
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
 .card {
     height: 9%;
     background-color: #333;
@@ -148,6 +153,9 @@ main {
     .add, .card {
         width: 80%;
     }
+    .empty-results {
+        margin-left: 10%;
+    }
 }
 
 /* Desktop */
@@ -160,6 +168,10 @@ main {
     .card {
         width: 90%;
         grid-template-columns: 10% auto;
+    }
+
+    .empty-results {
+        margin-left: 5%;
     }
 
     .add {

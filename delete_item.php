@@ -11,5 +11,8 @@
         $statement->execute();
         $statement->closeCursor();
     }
+
+    $deleted = true;
+
     include('index.php');
-?>
+    header("Location: .");

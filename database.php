@@ -10,4 +10,3 @@
         echo $error_message;
         exit();
     }
-?>

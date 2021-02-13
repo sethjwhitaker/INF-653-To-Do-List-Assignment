@@ -31,6 +31,7 @@
                 $statement->closeCursor();
                 unset($title);
                 unset($description);
+                header( "Location: .");
             }
 
             $select_query = "SELECT * FROM todoitems
@@ -61,11 +62,13 @@
                         <?php echo $rdesc ?>
                     </p>
                 </div>
-            <?php }} else {} ?>
+            <?php }} else { ?>
+                <h3 class="empty-results">No to do list items exist yet.</h3>
+            <?php } ?>
         </section>
         <section class="add">
             <h2>Add Item</h2>
-            <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
+            <form action="." method="POST">
                 <input type="text" name="title" id="title" placeholder="Title" required>
                 <br>
                 <input type="text" name="description" id="description" placeholder="Description" required>
